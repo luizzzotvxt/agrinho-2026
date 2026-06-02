@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background:
+    linear-gradient(rgba(0,0,0,0.92), rgba(0,0,0,0.96)),
+    url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1974&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-x: hidden;
+}
+
+@keyframes barShrink {
+  from { width: 100%; }
+  to   { width: 0%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0%   { transform: scale(0.85); opacity: 0; }
+  70%  { transform: scale(1.04); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { text-shadow: 0 0 20px #7CFC00; }
+  50%       { text-shadow: 0 0 40px #7CFC00, 0 0 60px #00ff88; }
+}
+
+.animate-fade-in  { animation: fadeIn  0.4s ease forwards; }
+.animate-pop-in   { animation: popIn   0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+.animate-pulse-glow { animation: pulseGlow 2s ease-in-out infinite; }
