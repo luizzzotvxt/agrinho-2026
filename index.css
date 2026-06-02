@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./styles/globals.css";
+@import "./styles/quiz.css";
+
+@custom-variant dark (&:is(.dark *));
